@@ -14,9 +14,9 @@ before_script:
   - sleep 3 # give xvfb some time to start
 
 script: 
-  - ./do_oclint.sh
   - ./build.sh
   - ./travis_qmake_gcc_cpp98_qt4_oclint
+  - ./do_oclint.sh
 
 after_success:
   - cat oclint.log
