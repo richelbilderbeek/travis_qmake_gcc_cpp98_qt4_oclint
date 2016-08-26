@@ -9,8 +9,8 @@ h_files=`ls *.h | egrep -v "^ui_.*\.h$"`
   $h_files \
   -- \
   -c -std=c++98 \
-  -I/usr/include/c++/4.8 \
-  -I/usr/include/x86_64-linux-gnu/c++/4.8 \
+  -I/usr/include/c++/4.7 \
+  -I/usr/include/x86_64-linux-gnu/c++/4.7 \
   -I/usr/include/qt4 \
   -I/usr/include/qt4/QtCore \
   -I/usr/include/qt4/QtGui
