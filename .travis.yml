@@ -1,6 +1,12 @@
 language: cpp
 compiler: gcc
 
+install:
+  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test --yes
+  - sudo apt-get update -qq 
+  - sudo apt-get install -qq libstdc++6-4.7-dev  
+  - ./install_oclint.sh
+
 # Start virtual X server, from https://docs.travis-ci.com/user/gui-and-headless-browsers/
 before_script:
   - "export DISPLAY=:99.0"
@@ -8,5 +14,12 @@ before_script:
   - sleep 3 # give xvfb some time to start
 
 script: 
- - ./build.sh
- - ./travis_qmake_gcc_cpp98_qt4_oclint
+  - ./do_oclint.sh
+  - ./build.sh
+  - ./travis_qmake_gcc_cpp98_qt4_oclint
+
+after_success:
+  - cat oclint.log
+
+after_failure:
+  - cat oclint.log
