@@ -34,3 +34,5 @@ qrc_*
 travis_qmake_gcc_cpp98_qt4_oclint
 *.tar.gz
 oclint-0.10.3/
+oclint.log
+oclint.log

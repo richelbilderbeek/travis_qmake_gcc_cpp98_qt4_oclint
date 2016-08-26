@@ -1,15 +1,10 @@
 
-Compiler Errors:
-(please be aware that these errors will prevent OCLint from analyzing this source code)
-
-/usr/include/qt5/QtCore/qglobal.h:1008:4: "You must build your code with position independent code if Qt was built with -reduce-relocations. "         "Compile your code with -fPIC or -fPIE."
-/home/p230198/GitHubs/travis_qmake_gcc_cpp98_qt4_oclint/my_dialog.cpp:2:10: 'ui_my_dialog.h' file not found
-/usr/include/c++/5/utility:68:10: 'bits/c++config.h' file not found
-
 
 OCLint Report
 
-Summary: TotalFiles=0 FilesWithViolations=0 P1=0 P2=0 P3=0 
+Summary: TotalFiles=3 FilesWithViolations=1 P1=0 P2=0 P3=2 
 
+/home/p230198/GitHubs/travis_qmake_gcc_cpp98_qt4_oclint/my_dialog.h:12:3: long variable name [naming|P3] Variable name with 25 characters is longer than the threshold of 20
+/home/p230198/GitHubs/travis_qmake_gcc_cpp98_qt4_oclint/my_dialog.h:12:3: avoid private static members [design|P3] 
 
 [OCLint (http://oclint.org) v0.10.3]
